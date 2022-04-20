@@ -1,0 +1,6 @@
+inventory\IntT\Step1.class
+inventory\repository\InventoryRepositoryTest.class
+inventory\model\PartTest.class
+inventory\IntT\Step2.class
+inventory\IntT\Step3.class
+inventory\repository\InventorySearchRepoTest.class
