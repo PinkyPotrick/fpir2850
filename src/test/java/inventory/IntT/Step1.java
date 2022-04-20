@@ -35,7 +35,7 @@ public class Step1 {
     private InventoryService inventoryservice = new InventoryService(inventoryrepository);
 
     @Test
-    @Order(1)
+    //@Order(1)
     public void verifyPart(){
         Mockito.when(thePart.getName()).thenReturn("working_part");
         Mockito.when(thePart.getPrice()).thenReturn(1.00);
@@ -51,7 +51,7 @@ public class Step1 {
     }
 
     @Test
-    @Order(2)
+    //@Order(2)
     public void verifyPart2(){
         Mockito.when(thePart.getName()).thenReturn("nonworking_part");
         Mockito.when(thePart.getPrice()).thenReturn(1.00);
@@ -68,7 +68,7 @@ public class Step1 {
     }
 
     @Test
-    @Order(3)
+    //@Order(3)
     public void verifyRepo(){
         Mockito.spy(inventoryrepository).addPart(thePart);
         Mockito.spy(inventoryrepository).addPart(thePart);
@@ -77,7 +77,7 @@ public class Step1 {
     }
 
     @Test
-    @Order(4)
+    //@Order(4)
     public void verifyRepo2(){
         inventoryrepository.deletePart(thePart);
         inventoryrepository.deletePart(thePart);
@@ -86,7 +86,7 @@ public class Step1 {
     }
 
     @Test
-    @Order(5)
+    //@Order(5)
     public void verifyService(){
         Mockito.spy(inventoryservice).addInhousePart(thePart.getName(), thePart.getPrice(), thePart.getInStock(), thePart.getMin(), thePart.getMax(), 1);
 
@@ -102,7 +102,7 @@ public class Step1 {
     }
 
     @Test
-    @Order(6)
+    //@Order(6)
     public void verifyService2(){
         assertEquals(0, inventoryservice.getAllParts().size());
     }
